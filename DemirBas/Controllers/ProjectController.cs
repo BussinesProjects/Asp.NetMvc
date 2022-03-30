@@ -17,10 +17,10 @@ namespace DemirBas.Controllers
         {
             return View();
         }
-        public ActionResult ProjectUpdate()
-        {
-            return View();
-        }
+        //public ActionResult ProjectUpdate()
+        //{
+        //    return View();
+        //}
         public ActionResult Products()
         {
             return View();

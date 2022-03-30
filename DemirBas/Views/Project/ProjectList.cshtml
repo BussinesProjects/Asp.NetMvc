@@ -76,7 +76,7 @@
                                                 <td>Kayıt Tarihi</td>
                                                 <td>Adet</td>
                                                 <td>
-                                                    <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProjectUpdate", "Project")';return false;"></button>
+                                                    <button class="btn-flat  btn-warning ti-pencil" data-toggle="modal" data-target="#updateModal"></button>
                                                     <button class="btn-flat btn-danger  sweet-confirm ti-trash "></button>
 
 
@@ -174,7 +174,7 @@
     <div class="modal-dialog">
         <div class="modal-content text-left">
             <div class="modal-header">
-                <h4 class="Sub-heading">Yeni Proje</h4>
+                <h4 class="Sub-heading">Proje Güncelle</h4>
                 <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="ti-close"></i></button>
 
             </div>
@@ -220,20 +220,16 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    @*<div class="form-group">
                         <label class="col-lg-3 control-label">Ürün Fotoğrafı</label>
                         <div class="col-lg-9">
 
                             <input class="form-control" type="file">
-                        </div>
-                    </div>
+                        </div>*@
+                    <!--</div>-->
                     <div class="form-group">
-                        <div class="col-lg-offset-8 col-lg-4">
-                            @*<span class="btn green fileinput-button">
-                                    <i class="fa fa-plus fa fa-white"></i>
-                                    <span>Attachment</span>
-                                    <input type="file" name="files[]" multiple="">
-                                </span>*@
+                        <div class="col-lg-offset-6 col-lg-6">
+                         
                             <button class="btn btn-danger" type="submit"> Listeye Dön </button>
                             <button class="btn btn-primary" type="submit"> Ekle </button>
                         </div>

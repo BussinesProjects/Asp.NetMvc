@@ -16,7 +16,7 @@
 
 
 <div class="content-wrap">
-    <div class="main">    
+    <div class="main">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 p-r-0 title-margin-right">
@@ -37,9 +37,7 @@
                     </div>
                 </div>
                 <!-- /# column -->
-
             </div>
-
             <!-- /# row -->
             <section id="main-content">
                 <div class="row">
@@ -65,12 +63,9 @@
                                                 <th>Personel İletişim</th>
                                                 <th>Kayıt Sayısı</th>
                                                 <td>
-                                                    <button class="btn-flat  btn-warning ti-pencil" onclick="location.href='@Url.Action("ProductUpdate", "Product")';return false;"></button>
-                                                    <button class="btn-flat  btn-info ti-info"></button>
+                                                    <button class="btn-flat  btn-warning ti-pencil" data-toggle="modal" data-target="#updateModal"></button>
+                                                    <button class="btn-flat  btn-info ti-info" data-toggle="modal" data-target=".bd-example-modal-sm"></button>
                                                     <button class="btn-flat btn-danger  sweet-confirm ti-trash "></button>
-
-
-
                                                 </td>
                                             </tr>
 
@@ -93,7 +88,7 @@
     <div class="modal-dialog">
         <div class="modal-content text-left">
             <div class="modal-header">
-                <h4 class="Sub-heading">Yeni Kategori</h4>
+                <h4 class="Sub-heading">Personel Güncelle</h4>
                 <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="ti-close"></i></button>
 
             </div>
@@ -106,7 +101,7 @@
                                 <label class="col-lg-4 control-label">Personel Adı</label>
                                 <div class="col-lg-8">
 
-                                    <input type="text" class="form-control" >
+                                    <input type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -120,23 +115,16 @@
                             <div class="form-group">
                                 <div class="col-lg-offset-5 col-lg-7">
                                     @*<span class="btn green fileinput-button">
-                    <i class="fa fa-plus fa fa-white"></i>
-                    <span>Attachment</span>
-                    <input type="file" name="files[]" multiple="">
-                </span>*@
+                                            <i class="fa fa-plus fa fa-white"></i>
+                                            <span>Attachment</span>
+                                            <input type="file" name="files[]" multiple="">
+                                        </span>*@
                                     <button class="btn btn-danger" type="submit"> Listeye Dön </button>
                                     <button class="btn btn-primary" type="submit"> Ekle </button>
                                 </div>
                             </div>
-
-
                         </div>
-
                     </div>
-
-
-
-
                 </form>
             </div>
         </div>
@@ -200,6 +188,48 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
+
+<div aria-hidden="true" role="dialog" tabindex="-1" class="modal fade bd-example-modal-sm">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="Sub-heading"> <b>Personel Detayı</b></h4>
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="ti-close"></i></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="modal-body" style="text-align:center;">
+                    <ul class="list-group z-depth-0">
+                        <li class="list-group-item justify-content-between" style="text-align:left;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>&nbsp;
+                            Ad Soyad:&nbsp; <b id="product-id"><i>Berfin Bayram</i></b>
+                        </li>
+                        <li class="list-group-item justify-content-between" style="text-align:left;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-open-fill" viewBox="0 0 16 16">
+                                <path d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.314l6.709 3.932L8 8.928l1.291.718L16 5.714V5.4a2 2 0 0 0-1.059-1.765l-6-3.2ZM16 6.873l-5.693 3.337L16 13.372v-6.5Zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516ZM0 13.373l5.693-3.163L0 6.873v6.5Z" />
+                            </svg> &nbsp;
+                            E-mail:&nbsp; <b id="product-warranty">  <i>berfin@via.tc</i></b>
+                        </li>
+                        <li class="list-group-item justify-content-between" style="text-align:left;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>&nbsp;
+                            Telefon:&nbsp; <b id="product-service"><i> 0562 0321450</i></b>
+                        </li>
+                    </ul>
+                </div>
+                <!--end::Heading-->
+                <!--begin::Users-->
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+    </div>
+</div>
+
+
 
 <!-- bootstrap -->
 <!-- scripit init-->

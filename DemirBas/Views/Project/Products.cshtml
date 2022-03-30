@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Products</h2>
+
 
 
 <!-- Styles -->
@@ -32,7 +32,9 @@
                     <div class="page-header">
                         <div class="page-title">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item">  <a href="#myModal" data-toggle="modal" title="Compose" class="btn-flat  btn-success ">EKLE</a>
+                                <li class="breadcrumb-item">
+                                    <button class="btn-flat  btn-success  ti-plus" data-toggle="modal" data-target="#myModal">EKLE</button>
+                                </li>
                             </ol>
                         </div>
                     </div>
@@ -52,7 +54,7 @@
                                                 <th>Seri Numarası</th>
                                                 <th>Marka</th>
                                                 <th>Model</th>
-                                                <th>Tedarikçi</th> 
+                                                <th>Tedarikçi</th>
                                                 <th>Adet</th>
                                                 <th>Tarih</th>
                                                 <th>İletişim</th>
@@ -92,7 +94,7 @@
     <div class="modal-dialog">
         <div class="modal-content text-left">
             <div class="modal-header">
-                <h4 class="Sub-heading">Yeni Demirbaş</h4>
+                <h4 class="Sub-heading">Yeni Ürün</h4>
                 <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="ti-close"></i></button>
 
             </div>
@@ -189,31 +191,26 @@
                                     <input type="text" class="form-control" value="tübitak">
                                 </div>
                             </div>
-                           
-                        </div>
-                       
-
-                        </div>
-
-                    <div class="row">
-
-                     
-
-
-                        <div class="form-group">
-                            <div class="col-lg-offset-7 col-lg-5">
-                                @*<span class="btn green fileinput-button">
-                    <i class="fa fa-plus fa fa-white"></i>
-                    <span>Attachment</span>
-                    <input type="file" name="files[]" multiple="">
-                </span>*@
-                                <button class="btn btn-danger" type="submit"> Listeye Dön </button>
-                                <button class="btn btn-primary" type="submit"> Ekle </button>
+                            <div class="form-group">
+                                <div class="col-lg-offset-5 col-lg-7">
+                                    @*<span class="btn green fileinput-button">
+                                            <i class="fa fa-plus fa fa-white"></i>
+                                            <span>Attachment</span>
+                                            <input type="file" name="files[]" multiple="">
+                                        </span>*@
+                                    <button class="btn btn-danger" type="submit"> Listeye Dön </button>
+                                    <button class="btn btn-primary" type="submit"> Ekle </button>
+                                </div>
                             </div>
+
                         </div>
 
 
                     </div>
+
+
+
+
 
                 </form>
             </div>
